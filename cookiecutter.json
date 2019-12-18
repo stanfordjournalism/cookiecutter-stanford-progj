@@ -1,0 +1,9 @@
+{
+  "repo_type": ["Assignment", "Exercise", "Project"],
+  "project_number_or_shortname": "",
+  "project_name": "{{ [cookiecutter.repo_type, cookiecutter.project_number_or_shortname]|join(' ') }}",
+  "project_short_description": "",
+  "repo_root":"{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "full_name":"",
+  "email":""
+}
