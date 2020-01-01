@@ -7,7 +7,7 @@
 Your system must have the following installed:
 
 * Python >= 3.5 ([install help for Python][])
-* [pipenv][] ([install help for pipenv][]) install intructions)
+* [pipenv][] ([install help for pipenv][])
 
 [install help for Python]: https://docs.python-guide.org/starting/installation/
 [install help for pipenv]: https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
@@ -17,64 +17,95 @@ Your system must have the following installed:
 After creating this project:
 
 * `cd {{ cookiecutter.repo_root }}`
-* `pipenv intsall`
+* `pipenv install`
 
-### Automating workflow
+## Save and push your work
 
-The above installs [invoke][], a task execution library.
-This project ships with a few pre-created commands that assist
-with the daily workflow of our class.
+This project includes a few command-line tasks that help
+with the daily workflow of our course. The tasks were created using [invoke][], a task execution library.
+
+Below are the most import commands:
 
 ```
-TK invoke examples
+invoke --list
+Available tasks:
+
+  code.push   Saves local work and pushes changes to GitHub
+  code.save   Saves changes locally (in git)
 ```
 
-You can also add your own commands to the `tasks.py` file
-for any project.
+After creating or modifying files in your text editor of choice,
+you should use these tasks to save your changes locally and push them to GitHub.
 
-### Installing other libraries
+> It's good to get in the habit of running these commands whenever you wrap up a coding session.
+
+```
+cd {{ cookiecutter.repo_root }}
+
+# Activate the virtual environment
+pipenv shell
+
+# Save the work and push to GitHub
+invoke code.save
+invoke code.push
+```
+
+## Installing Python libraries
 
 Depending on the type of project you're working on,
 you may want to install additional Python packages.
-Below are some useful librariers for common tasks
+Below are some useful libraries for common tasks
 such as interacting with APIs, scraping web pages,
 and data analysis:
 
 * APIs and web scraping - [requests][], [BeautifulSoup][], [selenium][]
-* data analysis - jupyter, pandas, matplotlib
+* data analysis - [jupyter][], [pandas][], [matplotlib][]
 
 The standard workflow is:
 
 ```
-
+cd {{ cookiecutter.repo_root }}
+# Install one or libraries, e.g. requests and BeautifulSoup
+pipenv install requests beautifulsoup4
 ```
 
 ## Files & Directories
 
-```
-└── {{cookiecutter.repo_root}}
-    ├── README.md
-    ├── data
-    │   ├── processed
-    │   └── raw
-    ├── notebooks
-    ├── scripts
-    └── src
-        └── __init__.py
-```
+Below
 
-[BeautifulSoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
-[invoke]: https://www.pyinvoke.org/
-[pipenv]: https://pipenv.readthedocs.io/en/latest/
-[requests]: https://2.python-requests.org/en/master/
-[selenium]: https://selenium-python.readthedocs.io/
-
+```   
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── data
+│   ├── processed (Raw data that has been transformed)
+│   └── raw  (Copy of original source data)
+├── lib (Re-usable Python code in .py files)
+│   ├── __init__.py
+│   └── utils.py
+├── notebooks (Jupyter notebooks)
+├── scripts (Number-prefixed data processing scripts)
+│   └── 1-etl.py
+└── tasks (invoke task definitions)
+    ├── __init__.py
+    └── code.py
+        
+```
 
 ## Reference
 
 * [Hitchhiker's Guide to Python](https://docs.python-guide.org/)
-* Python Standard Library. A few especially useful libraries:
-  * csv
-  * etree
-  * json
-  * os
+* [Python Standard Library](https://docs.python.org/3.7/library/index.html). A few especially useful libraries:
+  * csv - reading/writing CSV files
+  * json - reading/writing JSON
+  * os - working with OS, e.g. getting environment variables and walking directory/file trees
+
+
+[BeautifulSoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+[invoke]: https://www.pyinvoke.org/
+[jupyter]: https://jupyter.org/
+[matplotlib]: https://matplotlib.org/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py
+[pandas]: https://pandas.pydata.org/pandas-docs/stable/
+[pipenv]: https://pipenv.readthedocs.io/en/latest/
+[requests]: https://2.python-requests.org/en/master/
+[selenium]: https://selenium-python.readthedocs.io/
