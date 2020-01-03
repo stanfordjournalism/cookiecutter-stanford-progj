@@ -1,0 +1,4 @@
+datakit-core
+datakit-project
+datakit-github
+PyGithub
