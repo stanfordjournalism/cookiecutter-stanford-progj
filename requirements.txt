@@ -1,4 +1,5 @@
 datakit-core
 datakit-project
 datakit-github
+pipenv
 PyGithub

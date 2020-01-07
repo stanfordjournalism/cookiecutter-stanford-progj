@@ -2,17 +2,11 @@
 
 {{ cookiecutter.project_short_description }}
 
-## Pre-flight check
-
-Your system must have the following installed:
-
-* Python >= 3.5 ([install help for Python][])
-* [pipenv][] ([install help for pipenv][])
-
-[install help for Python]: https://docs.python-guide.org/starting/installation/
-[install help for pipenv]: https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
-
 ## Setup
+
+> Before using this project, please ensure all dependencies are installed. See the [project home page][] for details.
+
+[project home page]: https://github.com/stanfordjournalism/cookiecutter-stanford-progj#requirements--setup
 
 After creating this project:
 
