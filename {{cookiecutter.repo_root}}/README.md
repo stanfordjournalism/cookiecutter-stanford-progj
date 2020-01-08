@@ -65,7 +65,7 @@ pipenv install requests beautifulsoup4
 
 ## Files & Directories
 
-Below
+Below is an overview of the project structure:
 
 ```   
 ├── Pipfile
