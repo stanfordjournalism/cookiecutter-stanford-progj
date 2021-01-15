@@ -1,9 +1,8 @@
 {
-  "repo_type": ["Assignment", "Exercise", "Project"],
-  "project_number_or_shortname": "",
-  "project_name": "COMM 177P {{ [cookiecutter.repo_type, cookiecutter.project_number_or_shortname]|join(' ') }}",
+  "project_name": "",
+  "project_slug": "{{ cookiecutter.project_name.strip().lower().replace(' ', '-') }}",
   "project_short_description": "TK",
-  "repo_root":"{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "repo_root":"{{ cookiecutter.project_slug }}",
   "full_name":"",
   "email":""
 }
