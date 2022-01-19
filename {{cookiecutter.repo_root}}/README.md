@@ -53,7 +53,7 @@ such as interacting with APIs, scraping web pages,
 and data analysis:
 
 * APIs and web scraping - [requests][], [BeautifulSoup][], [selenium][]
-* data analysis - [jupyter][], [pandas][], [matplotlib][]
+* data analysis and viz - [jupyter][], [pandas][], [altair][]
 
 The standard workflow is:
 
@@ -98,7 +98,7 @@ Below is an overview of the project structure:
 [BeautifulSoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 [invoke]: https://www.pyinvoke.org/
 [jupyter]: https://jupyter.org/
-[matplotlib]: https://matplotlib.org/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py
+[altair]: https://altair-viz.github.io/
 [pandas]: https://pandas.pydata.org/pandas-docs/stable/
 [pipenv]: https://pipenv.readthedocs.io/en/latest/
 [requests]: https://2.python-requests.org/en/master/
