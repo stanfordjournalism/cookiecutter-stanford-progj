@@ -1,6 +1,6 @@
 # cookiecutter-stanford-progj
 
-A [cookiecutter][] template for Stanford's [Programming in Journalism course][] (Comm 177P/277P) in winter quarter 2020. 
+A [cookiecutter][] template for Stanford's *Programming in Journalism course* (Comm 177P/277P).
 
 The template is designed to introduce standardized development workflows and code hygiene to students.
 
@@ -21,13 +21,12 @@ This template is intended for use with [datakit][], a command-line tool for   au
 * Automatically adds instructors as repo collaborators
 
 
-[Programming in Journalism course]: https://github.com/stanfordjournalism/stanford-progj-2020
 [datakit]: https://datakit.ap.org/
 [Pipenv]: https://pipenv.readthedocs.io/en/latest/
 
 ## Requirements & Setup
 
-* [Python][] >= 3.5
+* [Python][] >= 3.7
 * Follow the [datakit-github install docs][]. **Skip the section called "Install DataKit libraries"** (these are handled in the step below).
 * Download and install `requirements.txt` in your system Python.
 
@@ -40,8 +39,7 @@ curl -s https://raw.githubusercontent.com/stanfordjournalism/cookiecutter-stanfo
 
 ## Usage
 
-This cookiecutter template will be installed locally 
-after creating your first project:
+This cookiecutter template will be installed locally after creating your first project:
 
 ```
 datakit project create --template gh:stanfordjournalism/cookiecutter-stanford-progj
@@ -59,11 +57,11 @@ For more details on using cookiecutter templates with datakit, see the [datakit-
 
 ## Project structure
 
-Projects generated using this template include a README.md with important reminders on the standard workflow, such as using `pipenv shell` when running code or tasks for the project. 
+Projects generated using this template include a README.md with important reminders on the standard workflow, such as using `pipenv shell` when running code or tasks for the project.
 
 The template builds out the below project structure:
 
-```   
+```
 ├── Pipfile
 ├── README.md
 ├── data
@@ -78,7 +76,7 @@ The template builds out the below project structure:
 └── tasks (invoke task definitions)
     ├── __init__.py
     └── code.py
-        
+
 ```
 
 ## Saving/pushing code
@@ -97,7 +95,7 @@ invoke code.save
 invoke code.push
 ```
 
-These commands are limited by design. Most notably, they require students to be on the master branch of the repo, and do not provide a way to pull upstream changes. 
+These commands are limited by design. Most notably, they require students to be on the master branch of the repo, and do not provide a way to pull upstream changes.
 
 More advanced students who want to branch, pull code from GitHub, etc. should use the standard git command-line tools or a Desktop client of their choice.
 
