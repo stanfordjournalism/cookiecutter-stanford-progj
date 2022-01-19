@@ -34,7 +34,7 @@ if create_github_repo == 'true':
         try:
             collaborators = os.environ['PROGJ_GH_COLLABORATORS'].split(':')
         except KeyError:
-            collaborators = ['zstumgoren', 'dilcia19']
+            collaborators = ['zstumgoren']
         for collaborator in collaborators:
             # Handle when repo owner adds self as collaborator
             try:
