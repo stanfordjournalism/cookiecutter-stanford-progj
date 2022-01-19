@@ -5,15 +5,15 @@ from git import Repo, Actor
 from invoke import task
 
 
-def force_master():
+def force_main():
     repo = Repo(os.environ['PROJECT_ROOT'])
-    if repo.active_branch.name != 'master':
-        sys.exit("Sorry, this command can only be run on master branch.")
+    if repo.active_branch.name != 'main':
+        sys.exit("Sorry, this command can only be run on main branch.")
 
 @task()
 def save(c):
     "Saves changes locally (in git)"
-    force_master()
+    force_main()
     repo = Repo(os.environ['PROJECT_ROOT'])
     modified_files = [item.a_path for item in repo.index.diff(None) if not item.deleted_file]
     deleted_files = [item.a_path for item in repo.index.diff(None) if item.deleted_file]

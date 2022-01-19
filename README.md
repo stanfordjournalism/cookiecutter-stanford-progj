@@ -95,7 +95,7 @@ invoke code.save
 invoke code.push
 ```
 
-These commands are limited by design. Most notably, they require students to be on the master branch of the repo, and do not provide a way to pull upstream changes.
+These commands are limited by design. Most notably, they require students to be on the `main` branch of the repo, and do not provide a way to pull upstream changes.
 
 More advanced students who want to branch, pull code from GitHub, etc. should use the standard git command-line tools or a Desktop client of their choice.
 
@@ -105,12 +105,12 @@ More advanced students who want to branch, pull code from GitHub, etc. should us
 
 ## Instructors
 
-Students who use invoke commands to save and push work to GitHub should generally be following a unidirectional workflow (save on `master` and push). If an instructor needs to suggest code changes or alternative implementations as part of the feedback process, we recommend one of the below strategies:
+Students who use invoke commands to save and push work to GitHub should generally be following a unidirectional workflow (save on `main` and push). If an instructor needs to suggest code changes or alternative implementations as part of the feedback process, we recommend one of the below strategies:
 
 * Add comments on files on GitHub
 * Use GH issues
 * Create a branch with changes and push to GitHub for discussion
-* Push changes to `master` branch and pair program with the student to guide them through use of lower-level git commands to pull down changes
+* Push changes to `main` branch and pair program with the student to guide them through use of lower-level git commands to pull down changes
 
 ## Extra configuration
 
